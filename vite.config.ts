@@ -22,7 +22,15 @@ export default defineConfig({
     ? {
         nitro: {
           preset: "github_pages",
-        },
+          // The wrapper's types don't expose `prerender`, but Nitro consumes it.
+          // Without an explicit route list the github_pages preset prerenders
+          // nothing and then crashes trying to emit an SSR bundle.
+          prerender: {
+            crawlLinks: true,
+            failOnError: false,
+            routes: ["/", "/sitemap.xml"],
+          },
+        } as never,
       }
     : {}),
 });
