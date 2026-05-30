@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import type { Page } from "@/lib/content";
 
@@ -19,8 +19,8 @@ export function BentoTile({ page, index }: { page: Page; index: number }) {
     cover?.type === "gradient"
       ? `linear-gradient(135deg, ${cover.from}, ${cover.to})`
       : cover?.type === "image"
-      ? undefined
-      : `linear-gradient(135deg, ${accent}33, transparent 70%)`;
+        ? undefined
+        : `linear-gradient(135deg, ${accent}33, transparent 70%)`;
 
   return (
     <motion.div
@@ -30,11 +30,9 @@ export function BentoTile({ page, index }: { page: Page; index: number }) {
       className={`group relative col-span-4 ${sizeClasses[size]} min-h-[180px]`}
     >
       <Link
-        to="/$slug"
-        params={{ slug: page.slug }}
+        to={`/${page.slug}`}
         className="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-2xl border border-hairline bg-surface p-6 transition-all duration-500 hover:-translate-y-1 hover:ring-glow"
       >
-        {/* cover layer */}
         <div
           className="absolute inset-0 -z-10 opacity-70 transition-opacity duration-500 group-hover:opacity-100"
           style={

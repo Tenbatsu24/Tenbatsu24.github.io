@@ -28,15 +28,18 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build static site
-        env:
-          DEPLOY_TARGET: github-pages
         run: bun run build
+
+      - name: SPA fallback (copy index.html to 404.html)
+        run: cp dist/index.html dist/404.html
+
+      - name: Disable Jekyll
+        run: touch dist/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Nitro's github_pages preset writes the static site here
-          path: ./.output/public
+          path: ./dist
 
   deploy:
     needs: build
