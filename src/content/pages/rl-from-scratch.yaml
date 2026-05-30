@@ -1,0 +1,22 @@
+title: "RL From Scratch: PPO Notes"
+description: "Minimal PPO implementation and gotchas I hit along the way."
+date: "2026-02-18"
+tags: [rl, ppo, notes]
+size: wide
+accent: "#e85d3a"
+cover:
+  type: gradient
+  from: "#0a0a1a"
+  to: "#e85d3a"
+blocks:
+  - type: markdown
+    content: |
+      A pared-down PPO that fits in ~300 lines. Useful as a teaching
+      reference and as a baseline I keep coming back to.
+  - type: figure
+    src: "https://images.unsplash.com/photo-1551033406-611cf9a28f67?w=1600&q=80"
+    caption: "Reward curves on MuJoCo HalfCheetah-v4 (5 seeds)."
+    width: full
+  - type: link
+    href: "https://github.com/"
+    label: "Source on GitHub →"

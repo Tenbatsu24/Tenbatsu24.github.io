@@ -1,0 +1,11 @@
+title: "Notes on Data Curation"
+description: "Heuristics that consistently moved validation loss."
+date: "2025-12-03"
+tags: [data, pretraining]
+size: small
+blocks:
+  - type: markdown
+    content: |
+      A running list of dataset-cleaning heuristics that paid off in
+      practice — dedup, language-id filtering, perplexity-based
+      pruning, and curriculum mixing.

@@ -1,0 +1,50 @@
+title: "Scaling Laws for Diffusion Models"
+description: "Empirical scaling behavior of small-to-mid diffusion models on image and audio tasks."
+date: "2026-05-10"
+tags: [diffusion, scaling, generative]
+size: large           # bento size: small | medium | large | wide | tall
+accent: "#7c6cff"     # optional, overrides default tile accent
+cover:
+  type: gradient      # "gradient" | "image"
+  from: "#4f46e5"
+  to: "#7c6cff"
+blocks:
+  - type: markdown
+    content: |
+      ## Overview
+
+      We trained a family of UNet-based diffusion models across compute
+      budgets from **1e17** to **1e19** FLOPs. The headline result: a
+      clean power-law in validation NLL versus compute, with an
+      irreducible loss floor consistent with prior work.
+
+  - type: figure
+    src: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1600&q=80"
+    caption: "Validation NLL vs. compute, across 6 model sizes."
+    width: full
+
+  - type: table
+    caption: "Best models at each scale."
+    headers: [Params, Train FLOPs, Val NLL, FID]
+    rows:
+      - ["32M", "1e17", "3.41", "18.2"]
+      - ["128M", "1e18", "3.05", "9.6"]
+      - ["512M", "1e19", "2.78", "5.1"]
+
+  - type: markdown
+    content: |
+      ## Try the model
+
+      The interactive demo below is a small HF Space hosting the
+      128M-parameter checkpoint.
+
+  - type: hf-space
+    src: "https://stabilityai-stable-diffusion.hf.space"
+    height: 720
+
+  - type: markdown
+    content: |
+      ## Notes
+
+      - All runs used cosine schedule, AdamW, EMA = 0.9999.
+      - Compute measured wall-clock × peak FLOPs on a single A100.

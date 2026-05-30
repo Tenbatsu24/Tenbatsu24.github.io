@@ -1,0 +1,33 @@
+title: "Sparse Autoencoders on MLP Activations"
+description: "Dictionary learning over hidden states of a small transformer."
+date: "2026-04-02"
+tags: [interpretability, sparse-coding]
+size: medium
+accent: "#5cbdb9"
+cover:
+  type: gradient
+  from: "#1e1e5a"
+  to: "#5cbdb9"
+blocks:
+  - type: markdown
+    content: |
+      ## Setup
+
+      We fit a sparse autoencoder (SAE) with **L1 = 1e-3** on the MLP
+      activations of layer 6 of a 12-layer transformer.
+  - type: figure
+    src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1600&q=80"
+    caption: "Feature density histogram (log scale)."
+    width: half
+  - type: figure
+    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80"
+    caption: "Top-activating tokens for feature #2841."
+    width: half
+  - type: code
+    language: python
+    content: |
+      import torch
+      from sae import SparseAutoencoder
+
+      sae = SparseAutoencoder(d_model=768, d_hidden=8192, l1=1e-3)
+      sae.fit(activations, epochs=4)

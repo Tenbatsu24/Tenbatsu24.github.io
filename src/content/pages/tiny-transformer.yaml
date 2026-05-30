@@ -1,0 +1,18 @@
+title: "Tiny Transformer Visualizer"
+description: "Stepping through attention patterns of a 2-layer transformer."
+date: "2026-01-09"
+tags: [interpretability, transformers]
+size: tall
+accent: "#f0d78c"
+cover:
+  type: gradient
+  from: "#141432"
+  to: "#f0d78c"
+blocks:
+  - type: markdown
+    content: |
+      A small interactive tool I built to debug attention patterns
+      while learning the original Anthropic interpretability papers.
+  - type: hf-space
+    src: "https://stabilityai-stable-diffusion.hf.space"
+    height: 600

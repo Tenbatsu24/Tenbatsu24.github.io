@@ -1,0 +1,14 @@
+name: "Research Notes"
+tagline: "Experiments, figures, and write-ups."
+author: "Your Name"
+bio: |
+  I'm a researcher exploring [topics]. This site collects my projects,
+  plots, and ongoing experiments. Edit `src/content/site.yaml` to make
+  it yours.
+links:
+  - label: GitHub
+    href: https://github.com/
+  - label: Twitter
+    href: https://twitter.com/
+  - label: Email
+    href: mailto:you@example.com
