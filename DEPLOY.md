@@ -20,7 +20,7 @@ This site is configured to build as a fully static bundle using Nitro's
   linked route (home + each page in `src/content/pages/*.yaml` +
   `sitemap.xml`), and writes `.nojekyll` so Pages serves files starting
   with `_` correctly.
-- Output goes to `dist/public/`, which the workflow uploads as the Pages
+- Output goes to `.output/public/`, which the workflow uploads as the Pages
   artifact.
 - Because this is a user/organisation site (`username.github.io`), the
   base path is `/` — no extra config needed. For project sites
@@ -37,5 +37,5 @@ deploy — no code changes needed.
 
 ```bash
 DEPLOY_TARGET=github-pages bun run build
-npx serve dist/public
+npx serve .output/public
 ```
