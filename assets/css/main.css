@@ -1,0 +1,1167 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+
+/* =========================================================
+   THEME SYSTEM
+   ========================================================= */
+
+/*
+   Six intentionally distinct visual themes.
+
+   Midnight   = default, deep blue-black
+   Graphite   = neutral charcoal
+   Dusk       = indigo / muted purple
+   Paper      = soft neutral light
+   Parchment  = warm ivory / literary
+   Sage       = muted green-grey
+*/
+
+
+/* ---------------------------------------------------------
+   Midnight — DEFAULT
+   Deep blue-black, cool, technical, academic.
+   --------------------------------------------------------- */
+
+:root,
+html[data-theme="midnight"] {
+  color-scheme: dark;
+
+  --bg: #0b1220;
+  --surface: #111a2b;
+  --surface-raised: #172235;
+
+  --text: #d7e1eb;
+  --heading: #f1f5f9;
+  --muted: #8fa1b5;
+
+  --link: #7db7ff;
+  --link-hover: #a9d0ff;
+
+  --accent: #5ea7ff;
+  --accent-hover: #8bc1ff;
+
+  --border: #26364d;
+  --border-strong: #344962;
+
+  --nav-bg: #0e1726;
+  --nav-border: #26364d;
+
+  --code-bg: #0a101b;
+
+  --shadow: rgba(0, 0, 0, 0.28);
+  --shadow-hover: rgba(0, 0, 0, 0.42);
+}
+
+
+/* ---------------------------------------------------------
+   Graphite
+   Neutral charcoal, understated and monochrome.
+   --------------------------------------------------------- */
+
+html[data-theme="graphite"] {
+  color-scheme: dark;
+
+  --bg: #151719;
+  --surface: #1d2023;
+  --surface-raised: #25292d;
+
+  --text: #d4d7da;
+  --heading: #f0f1f2;
+  --muted: #969ba1;
+
+  --link: #c3c9cf;
+  --link-hover: #ffffff;
+
+  --accent: #b8c0c8;
+  --accent-hover: #e1e5e8;
+
+  --border: #30353a;
+  --border-strong: #41474e;
+
+  --nav-bg: #191b1e;
+  --nav-border: #30353a;
+
+  --code-bg: #101214;
+
+  --shadow: rgba(0, 0, 0, 0.32);
+  --shadow-hover: rgba(0, 0, 0, 0.48);
+}
+
+
+/* ---------------------------------------------------------
+   Dusk
+   Dark indigo / muted purple.
+   --------------------------------------------------------- */
+
+html[data-theme="dusk"] {
+  color-scheme: dark;
+
+  --bg: #171622;
+  --surface: #211f30;
+  --surface-raised: #2a273b;
+
+  --text: #d9d6e5;
+  --heading: #f2eff8;
+  --muted: #a19caf;
+
+  --link: #b7a8ff;
+  --link-hover: #d1c7ff;
+
+  --accent: #9b8cff;
+  --accent-hover: #b8adff;
+
+  --border: #353148;
+  --border-strong: #48415e;
+
+  --nav-bg: #1b1928;
+  --nav-border: #353148;
+
+  --code-bg: #11101a;
+
+  --shadow: rgba(7, 5, 15, 0.32);
+  --shadow-hover: rgba(7, 5, 15, 0.48);
+}
+
+
+/* ---------------------------------------------------------
+   Paper
+   Soft neutral light mode.
+   Deliberately NOT pure white.
+   --------------------------------------------------------- */
+
+html[data-theme="paper"] {
+  color-scheme: light;
+
+  --bg: #f3f4f2;
+  --surface: #e9ebe8;
+  --surface-raised: #ffffff;
+
+  --text: #394047;
+  --heading: #1f2529;
+  --muted: #687178;
+
+  --link: #315f86;
+  --link-hover: #214966;
+
+  --accent: #3d718f;
+  --accent-hover: #2f5b75;
+
+  --border: #d5d9d5;
+  --border-strong: #c3c9c4;
+
+  --nav-bg: #e7e9e6;
+  --nav-border: #d1d5d1;
+
+  --code-bg: #e3e6e3;
+
+  --shadow: rgba(31, 37, 41, 0.07);
+  --shadow-hover: rgba(31, 37, 41, 0.13);
+}
+
+
+/* ---------------------------------------------------------
+   Parchment
+   Warm ivory, literary / archival.
+   --------------------------------------------------------- */
+
+html[data-theme="parchment"] {
+  color-scheme: light;
+
+  --bg: #f2ecdf;
+  --surface: #e9e0d0;
+  --surface-raised: #f8f3e9;
+
+  --text: #4c443b;
+  --heading: #29231d;
+  --muted: #766b5e;
+
+  --link: #7b5434;
+  --link-hover: #5e3e25;
+
+  --accent: #a46a3f;
+  --accent-hover: #80502f;
+
+  --border: #d8ccba;
+  --border-strong: #c6b9a5;
+
+  --nav-bg: #e7dece;
+  --nav-border: #d1c4b1;
+
+  --code-bg: #e1d7c6;
+
+  --shadow: rgba(65, 48, 31, 0.08);
+  --shadow-hover: rgba(65, 48, 31, 0.15);
+}
+
+
+/* ---------------------------------------------------------
+   Sage
+   Muted green-grey, calm and natural.
+   --------------------------------------------------------- */
+
+html[data-theme="sage"] {
+  color-scheme: light;
+
+  --bg: #e9eee9;
+  --surface: #dfe7e0;
+  --surface-raised: #f3f6f3;
+
+  --text: #3c4941;
+  --heading: #202c25;
+  --muted: #68766d;
+
+  --link: #416b55;
+  --link-hover: #2d503e;
+
+  --accent: #527d63;
+  --accent-hover: #3d624d;
+
+  --border: #ccd7ce;
+  --border-strong: #bac8bd;
+
+  --nav-bg: #dfe7e0;
+  --nav-border: #c8d3ca;
+
+  --code-bg: #d8e1d9;
+
+  --shadow: rgba(34, 49, 40, 0.07);
+  --shadow-hover: rgba(34, 49, 40, 0.14);
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+body {
+  background-color: var(--bg);
+  padding: 25px 50px 50px 50px;
+  font: 15px/1.6 "JetBrains Mono", "Fira Code", "SF Mono",
+        Monaco, "Cascadia Code", "Roboto Mono", Consolas,
+        "Courier New", monospace;
+  color: var(--text);
+  font-weight: 400;
+  margin: 0;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading);
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  color: var(--heading);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+  margin: 30px 0 20px 0;
+}
+
+h4, h5, h6 {
+  color: var(--muted);
+}
+
+p, ul, ol, table, pre, dl {
+  margin: 0 0 20px;
+}
+
+ol {
+  padding-left: 15px;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+a small {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: -0.3em;
+  display: block;
+}
+
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   SKIP LINK
+   ========================================================= */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 6px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.main-nav .nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav .nav-brand {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.nav-brand {
+  margin-right: 5px;
+  align-items: left;
+}
+
+.main-nav .nav-brand:hover {
+  color: var(--accent);
+}
+
+.main-nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav .nav-links a {
+  font-size: 14px;
+  color: var(--text);
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.main-nav .nav-links a:hover {
+  background: var(--surface);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.main-nav .nav-links a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROFILE / HEADER
+   ========================================================= */
+
+.profile-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-section .title {
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+.profile-image {
+  margin: 20px 0;
+}
+
+#face_img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.2s ease;
+}
+
+#face_img:hover {
+  transform: scale(1.02);
+}
+
+header img:not(#face_img) {
+  height: 28px;
+  width: auto;
+}
+
+header {
+  padding-top: 25px;
+  width: 270px;
+  float: left;
+  position: fixed;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+header h3 {
+  margin: 20px 0 10px 0;
+}
+
+main {
+  padding-top: 25px;
+}
+
+
+/* =========================================================
+   CONTENT LINKS / VIEW
+   ========================================================= */
+
+.view a {
+  display: inline-block;
+  margin: 2px 0;
+  padding: 4px 8px;
+  background: var(--surface);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+  font-size: 13px;
+}
+
+.view a:hover {
+  background: var(--surface-raised);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   MAIN SECTIONS
+   ========================================================= */
+
+section,
+main {
+  width: 800px;
+  float: right;
+  padding-bottom: 50px;
+}
+
+
+/* =========================================================
+   PUBLICATIONS
+   ========================================================= */
+
+.publication-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 25px 15px 25px 8px;
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.3s ease,
+    border-left-color 0.3s ease;
+}
+
+.publication-item:hover {
+  box-shadow: 0 6px 20px var(--shadow-hover);
+  border-left-color: var(--accent-hover);
+}
+
+.publication-thumbnail {
+  flex-shrink: 0;
+  width: 80px;
+  transition: transform 0.3s ease;
+}
+
+.publication-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.publication-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: opacity 0.3s ease;
+}
+
+.publication-content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   NEWS
+   ========================================================= */
+
+.news-list li {
+  margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   BLOG
+   ========================================================= */
+
+.blog-list {
+  list-style: none;
+  padding: 0;
+}
+
+.blog-list li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-list .excerpt {
+  margin-top: 5px;
+}
+
+.post-meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.post-content {
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--shadow-hover);
+}
+
+.project-card .project-thumbnail img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card .project-content {
+  padding: 15px;
+}
+
+.project-card h3 {
+  margin: 0 0 10px 0;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 2px 4px 2px 0;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.project-tags {
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.btn-cv {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 8px;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn-cv:hover {
+  background: var(--accent-hover);
+  color: var(--bg);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   EMAIL COPY
+   ========================================================= */
+
+.email-copy {
+  cursor: pointer;
+  position: relative;
+}
+
+.email-copy:hover::after {
+  content: "Click to copy";
+  position: absolute;
+  background: var(--surface-raised);
+  color: var(--heading);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -30px;
+  left: 0;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   BLOCKQUOTES
+   ========================================================= */
+
+blockquote {
+  border-left: 1px solid var(--border-strong);
+  margin: 0;
+  padding: 0 0 0 20px;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   CODE
+   ========================================================= */
+
+code,
+pre {
+  font-family:
+    Monaco,
+    "Bitstream Vera Sans Mono",
+    "Lucida Console",
+    Terminal,
+    Consolas,
+    "Liberation Mono",
+    "DejaVu Sans Mono",
+    "Courier New",
+    monospace;
+  font-size: 13px;
+}
+
+pre {
+  padding: 8px 15px;
+  background: var(--code-bg);
+  color: var(--text);
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+
+/* Pygments / syntax highlighting */
+
+pre.highlight,
+.highlight pre,
+.highlight {
+  background: var(--code-bg);
+}
+
+
+/* =========================================================
+   TABLES
+   ========================================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  text-align: left;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+dt {
+  color: var(--heading);
+  font-weight: 700;
+}
+
+th {
+  color: var(--heading);
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+img {
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   HORIZONTAL RULE
+   ========================================================= */
+
+hr {
+  border: 0;
+  background: var(--border);
+  height: 1px;
+  margin: 0 0 20px;
+}
+
+
+/* =========================================================
+   TEXT EMPHASIS
+   ========================================================= */
+
+strong {
+  color: var(--heading);
+  font-weight: 700;
+}
+
+small {
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   THEME PICKER
+   ========================================================= */
+
+.theme-toggle {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  z-index: 200;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background: var(--nav-bg);
+  color: var(--text);
+  border: 1px solid var(--nav-border);
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-size: 18px;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle .theme-icon {
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   THEME MENU
+   ========================================================= */
+
+.theme-menu {
+  position: fixed;
+  top: 108px;
+  right: 20px;
+  z-index: 199;
+
+  width: 220px;
+  padding: 8px;
+
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  box-shadow: 0 12px 35px var(--shadow-hover);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+
+  transition:
+    opacity 0.15s ease,
+    visibility 0.15s ease,
+    transform 0.15s ease;
+}
+
+.theme-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.theme-menu-title {
+  padding: 6px 8px 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.theme-option {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px;
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+  color: var(--text);
+
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.theme-option:hover {
+  background: var(--surface);
+}
+
+.theme-option.is-active {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.theme-option:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+
+/* Theme swatches */
+
+.theme-swatch {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+}
+
+.theme-swatch-midnight {
+  background: #0b1220;
+}
+
+.theme-swatch-graphite {
+  background: #151719;
+}
+
+.theme-swatch-dusk {
+  background: #171622;
+}
+
+.theme-swatch-paper {
+  background: #f3f4f2;
+}
+
+.theme-swatch-parchment {
+  background: #f2ecdf;
+}
+
+.theme-swatch-sage {
+  background: #e9eee9;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.wrapper > p > small {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media print, screen and (max-width: 1200px) {
+
+  .wrapper {
+    width: auto;
+    margin: 0;
+  }
+
+  header,
+  section,
+  main,
+  footer {
+    float: none;
+    position: static;
+    width: auto;
+  }
+
+  header {
+    margin-top: 10px;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  main {
+    margin-top: 10px;
+  }
+
+  section,
+  main {
+    border: 1px solid var(--border);
+    border-width: 1px 0;
+    padding: 20px 0;
+    margin: 0 0 20px;
+  }
+
+  #face_img {
+    width: 200px;
+  }
+
+  .main-nav .nav-inner {
+    padding: 10px 20px;
+  }
+
+  .theme-toggle {
+    top: 55px;
+    right: 15px;
+  }
+
+  .theme-menu {
+    top: 103px;
+    right: 15px;
+  }
+
+  header img:not(#face_img) {
+    height: 24px;
+    width: auto;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — SMALL
+   ========================================================= */
+
+@media print, screen and (max-width: 720px) {
+
+  body {
+    word-wrap: break-word;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  header ul,
+  header p.view {
+    position: static;
+  }
+
+  pre,
+  code {
+    word-wrap: normal;
+  }
+
+  .theme-menu {
+    width: 200px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media print, screen and (max-width: 480px) {
+
+  body {
+    padding: 15px;
+  }
+
+  .main-nav .nav-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav .nav-links {
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #face_img {
+    width: 160px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .theme-toggle {
+    top: 15px;
+    right: 15px;
+  }
+
+  .theme-menu {
+    top: 63px;
+    right: 15px;
+    width: min(220px, calc(100vw - 30px));
+  }
+}
+
+
+/* =========================================================
+   PRINT
+   ========================================================= */
+
+@media print {
+
+  body {
+    padding: 0.4in;
+    font-size: 12pt;
+    color: #444;
+    background: #fff;
+  }
+
+  .main-nav,
+  .theme-toggle,
+  .theme-menu {
+    display: none;
+  }
+}

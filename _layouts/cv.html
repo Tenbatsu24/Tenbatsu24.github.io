@@ -1,0 +1,36 @@
+---
+layout: base
+---
+<main id="main" role="main">
+  <h3>Curriculum Vitae</h3>
+
+  <p>Download my CV as a PDF:</p>
+  <p>
+    <a href="{{ site.baseurl }}/cv/cv.pdf" target="_blank" rel="noopener" class="cv-download-btn">
+      &#128190; Download CV (PDF)
+    </a>
+  </p>
+
+  <p><small>Place your CV PDF in the <code>cv/</code> directory. Update the link above if you use a different filename.</small></p>
+
+  <p><small><a href="{{ site.baseurl }}/">&larr; Back to home</a></small></p>
+</main>
+
+<script>
+  function copyEmail() {
+    const email = "{{ site.author.email }}";
+    navigator.clipboard.writeText(email).then(() => {
+      const span = document.querySelector('.email-copy');
+      const original = span.textContent;
+      span.textContent = "Copied!";
+      span.style.background = "#4CAF50";
+      span.style.color = "white";
+      span.style.padding = "2px 4px";
+      span.style.borderRadius = "3px";
+      setTimeout(() => {
+        span.textContent = original;
+        span.removeAttribute("style");
+      }, 1500);
+    });
+  }
+</script>

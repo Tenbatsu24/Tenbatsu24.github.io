@@ -1,0 +1,38 @@
+---
+layout: base
+title: Projects
+---
+<div class="wrapper">
+
+  <main id="main" role="main">
+
+    <h2>Projects</h2>
+    {% if site.projects.size > 0 %}
+      <div class="projects-grid">
+        {% for project in site.projects %}
+        <div class="project-card">
+          {% if project.thumbnail %}
+            <div class="project-thumbnail">
+              <img src="{{ site.baseurl }}/assets/images/{{ project.thumbnail }}" alt="{{ project.name }}" loading="lazy">
+            </div>
+          {% endif %}
+          <div class="project-content">
+            <h3><a href="{{ site.baseurl }}{{ project.url }}">{{ project.name }}</a></h3>
+            <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
+            {% if project.tags %}
+              <div class="project-tags">
+                {% for tag in project.tags %}
+                  <span class="tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p><small>[No projects yet. Add projects in the <code>_projects/</code> directory.]</small></p>
+    {% endif %}
+
+  </main>
+</div>

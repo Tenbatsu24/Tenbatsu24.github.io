@@ -1,0 +1,28 @@
+---
+layout: base
+---
+<main id="main" role="main">
+  <article class="project">
+    <h2>{{ page.name | default: page.title }}</h2>
+    {% if page.tags %}
+      <p class="project-tags">
+        {% for tag in page.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </p>
+    {% endif %}
+    <div class="project-content">
+      {{ content }}
+    </div>
+    {% if page.links %}
+      <h3>Links</h3>
+      <ul>
+        {% for link in page.links %}
+        <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </article>
+
+  <p><small><a href="{{ site.baseurl }}/projects/">&larr; Back to all projects</a></small></p>
+</main>

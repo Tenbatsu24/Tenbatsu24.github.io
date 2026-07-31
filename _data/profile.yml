@@ -1,0 +1,57 @@
+# Homepage profile data — all content sections live here.
+# Edit this file to update the homepage; do not edit _layouts/default.html.
+
+# ── Affiliation ──────────────────────────────────────────────────────────────
+affiliation:
+  role: "Ph.D. researcher"
+  lab: "Your Lab / Group"
+  lab_link: "[your lab link]"
+  supervisors:
+    - name: "[Supervisor 1]"
+      link: "[supervisor 1 link]"
+    - name: "[Supervisor 2]"
+      link: "[supervisor 2 link]"
+
+# ── Research Interests ──────────────────────────────────────────────────────
+research_interests:
+  - "Artificial Intelligence and Cognitive Modelling"
+  - "[Add your own topics, e.g. Computational Neuroscience]"
+  - "[Add another focus]"
+
+# ── Publications ────────────────────────────────────────────────────────────
+publications:
+  - thumbnail: "pub_sample.jpg"
+    citation: |
+      [Your Name], [Coauthors]<br>
+      <b><i>[Title of Your Paper]</i></b><br>
+      [Conference/Journal Name, Year]<br>
+      [<a href="[arxiv link]">arXiv</a>] [<a href="[code link]">code</a>] [<a href="[project page link]">project page</a>]
+
+# ── Education ───────────────────────────────────────────────────────────────
+education:
+  - degree: "Ph.D. [Your Field]"
+    institution: "[Your University]"
+    start: "[Start Year]"
+    end: "present"
+  - degree: "M.Sc. [Your Field]"
+    institution: "[Previous University]"
+    start: "[Years]"
+  - degree: "B.Sc. [Your Field]"
+    institution: "[Previous University]"
+    start: "[Years]"
+
+# ── Experience ──────────────────────────────────────────────────────────────
+experience:
+  - org: "[Research Lab / Company]"
+    location: "[Location]"
+    start: "[Year]"
+    end: "present"
+    role: "[Your role]"
+  - org: "[Other Institution]"
+    location: ""
+    start: "[Year]"
+    end: "[Year]"
+    role: "[Description]"
+
+# ── Footer ──────────────────────────────────────────────────────────────────
+footer: "Hosted on GitHub Pages — Adapted from [Takeru Miyato](https://takerum.github.io/)'s template."

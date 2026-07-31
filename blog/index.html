@@ -1,0 +1,28 @@
+---
+layout: base
+title: Blog
+---
+<div class="wrapper">
+
+  <main id="main" role="main">
+
+    <h2>Blog</h2>
+    {% assign posts = site.posts | sort: 'date' | reverse %}
+    {% if posts.size > 0 %}
+      <ul class="blog-list">
+        {% for post in posts %}
+        <li>
+          <a href="{{ site.baseurl }}{{ post.url }}"><b>{{ post.title }}</b></a>
+          <small>{{ post.date | date: "%b %d, %Y" }}{% if post.categories %} &middot; {{ post.categories | array_to_string_separator: ", " }}{% endif %}</small>
+          {% if post.excerpt %}
+            <p class="excerpt"><small>{{ post.excerpt | strip_html | truncatewords: 30 }}</small></p>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p><small>[No blog posts yet. Add posts in the <code>_posts/</code> directory.]</small></p>
+    {% endif %}
+
+  </main>
+</div>

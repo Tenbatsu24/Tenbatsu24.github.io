@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+<main id="main" role="main">
+  <article class="post">
+    <h2>{{ page.title }}</h2>
+    <p class="post-meta">
+      <small>{{ page.date | date: "%B %d, %Y" }}{% if page.categories %} &middot; {{ page.categories | array_to_string_separator: ", " }}{% endif %}</small>
+    </p>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+
+  <p><small><a href="{{ site.baseurl }}/blog/">&larr; Back to all posts</a></small></p>
+
+  {% if site.related_posts.size > 0 %}
+    <h3>Related Posts</h3>
+    <ul>
+      {% for post in site.related_posts limit: 3 %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date: "%b %Y" }}</small></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</main>

@@ -1,0 +1,140 @@
+---
+layout: base
+---
+
+<main id="main" role="main">
+
+    {%- assign p = site.data.profile -%}
+
+    <!-- Affiliation -->
+    <h3>Affiliation</h3>
+    <p>
+      {{ p.affiliation.role }} @
+      {% if p.affiliation.lab_link %}
+        <a href="{{ p.affiliation.lab_link }}">{{ p.affiliation.lab }}</a>
+      {% else %}
+        {{ p.affiliation.lab }}
+      {% endif %}
+      <br>
+      Supervisors:
+      {% for sup in p.affiliation.supervisors %}
+        {% if sup.link %}
+          <a href="{{ sup.link }}">{{ sup.name }}</a>
+        {% else %}
+          {{ sup.name }}
+        {% endif %}
+        {% if forloop.last != true %}, {% endif %}
+      {% endfor %}
+    </p>
+
+    <!-- Research Interests -->
+    <h3>Research Interests</h3>
+    <ul>
+      {% for interest in p.research_interests %}
+        <li>{{ interest }}</li>
+      {% endfor %}
+    </ul>
+
+    <!-- Latest News -->
+    <h3>Latest News</h3>
+    <ul class="news-list">
+      {% assign recent_posts = site.posts | limit: 3 %}
+      {% if recent_posts.size > 0 %}
+        {% for post in recent_posts %}
+        <li>
+          <small>{{ post.date | date: "%b %Y" }}</small> — <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      {% else %}
+        <li><small>[No recent updates. Add blog posts to see them here.]</small></li>
+      {% endif %}
+    </ul>
+
+    <!-- Publications -->
+    <h3>Publications</h3>
+    <p>Full list available on <a href="https://scholar.google.com/{{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    <ol>
+      {% for pub in p.publications %}
+      <li class="publication-item">
+        <div class="publication-thumbnail">
+          <img src="{{ site.baseurl }}/assets/images/{{ pub.thumbnail }}" alt="Thumbnail for {{ pub.title }}" loading="lazy">
+        </div>
+        <div class="publication-content">
+          {{ pub.citation }}
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+
+    <!-- Projects -->
+    <h3>Projects</h3>
+    {% if site.projects.size > 0 %}
+      <div class="projects-grid">
+        {% for project in site.projects %}
+        <div class="project-card">
+          {% if project.thumbnail %}
+            <div class="project-thumbnail">
+              <img src="{{ site.baseurl }}/assets/images/{{ project.thumbnail }}" alt="{{ project.name }}" loading="lazy">
+            </div>
+          {% endif %}
+          <div class="project-content">
+            <h3><a href="{{ site.baseurl }}{{ project.url }}">{{ project.name }}</a></h3>
+            <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
+            {% if project.tags %}
+              <div class="project-tags">
+                {% for tag in project.tags %}
+                  <span class="tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <p><small><a href="{{ site.baseurl }}/projects/">View all projects &rarr;</a></small></p>
+    {% else %}
+      <p><small>[No projects yet. Add projects in the <code>_projects/</code> directory.]</small></p>
+    {% endif %}
+
+    <!-- Education -->
+    <h3>Education</h3>
+    <ul>
+      {% for edu in p.education %}
+      <li>
+        <b>{{ edu.degree }}</b> – {{ edu.institution }}
+        {% if edu.start %}{{ edu.start }}{% if edu.end %} – {{ edu.end }}{% endif %}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <!-- Experience -->
+    <h3>Experience</h3>
+    <ul>
+      {% for exp in p.experience %}
+      <li>
+        <b>{{ exp.org }}</b>{% if exp.location != "" %} — {{ exp.location }}{% endif %} {{ exp.start }}{% if exp.end %}–{{ exp.end }}{% endif %} — {{ exp.role }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <p><small>{{ p.footer | markdownify | strip }}</small></p>
+  </main>
+
+<script>
+  function copyEmail() {
+    const email = "{{ site.author.email }}";
+    navigator.clipboard.writeText(email).then(() => {
+      const span = document.querySelector('.email-copy');
+      const original = span.textContent;
+      span.textContent = "Copied!";
+      span.style.background = "#4CAF50";
+      span.style.color = "white";
+      span.style.padding = "2px 4px";
+      span.style.borderRadius = "3px";
+      setTimeout(() => {
+        span.textContent = original;
+        span.removeAttribute("style");
+      }, 1500);
+    });
+  }
+</script>
