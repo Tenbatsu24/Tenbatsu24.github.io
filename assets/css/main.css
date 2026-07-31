@@ -534,8 +534,9 @@ main {
 }
 
 .publication-thumbnail {
+  margin-right: 16px;
   flex-shrink: 0;
-  width: 80px;
+  width: 128px;
   transition: transform 0.3s ease;
 }
 

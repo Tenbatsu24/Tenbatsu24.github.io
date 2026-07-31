@@ -1,26 +1,22 @@
 # Jekyll configuration — GitHub Pages compatible
 # Site settings
-title: "Ph.D. researcher"
-email: "researcher@university.edu"
+title: "Personal Portfolio"
+email: "p.vaish@utwente.nl"
 description: >-
-  PhD researcher working on AI, machine learning, and ... .
-baseurl: "/modernist-template" # Set to "/<project-name>" if deploying as a subproject; leave empty for <username>.github.io
+  PhD researcher working with efficiency in machine learning and computer vision, applied in the medical domain.
+baseurl: ""
 url: "tenbatsu24.github.io" # Set to "https://yourusername.github.io" when deploying
 
 # Author profile
 author:
-  name: Daily Name
-  email: "researcher@university.edu"
-  image: "assets/images/profile.png"  # path relative to site baseurl (leave empty to hide)
-  github: "GITHUB_USERNAME"  # comment out to hide
-  scholar: "GOOGLE_SCHOLAR_ID"  # comment out to hide
-  twitter: "TWITTER_HANDLE"  # comment out to hide
-  bluesky: "BLUESKY_HANDLE"  # comment out to hide (e.g. "handle.bsky.social")
-  linkedin: "LINKEDIN_HANDLE"  # comment out to hide
-  mastodon: "MASTODON_HANDLE"  # comment out to hide (e.g. "@handle@mastodon.social")
-  orcid: "ORCID_ID"  # comment out to hide
-  cv: "CV_FILENAME.pdf"  # comment out to hide (path relative to site baseurl, e.g. "assets/files/cv.pdf")
-  website: "https://example.com"  # comment out to hide
+  name: P. Vaish (Mei)
+  email: "p.vaish@utwente.nl"
+  image: "assets/images/profile.png"
+  github: "tenbatsu24"
+  scholar: "aofbvEQAAAAJ"  # comment out to hide
+  linkedin: "puru-vaish-5b77931a7/"  # comment out to hide
+  orcid: "0000-0002-5180-5293"  # comment out to hide
+  website: "https://enigmach.nl"  # comment out to hide
 
 # Collections
 collections:
@@ -36,7 +32,6 @@ kramdown:
     css_class: highlight
     style: monokai
 
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -50,6 +45,9 @@ defaults:
       type: projects
     values:
       layout: project
+      featured: false
+      categories:
+        - project
 
 # Exclude from processing
 exclude:

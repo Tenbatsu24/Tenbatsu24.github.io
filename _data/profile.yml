@@ -3,55 +3,58 @@
 
 # ── Affiliation ──────────────────────────────────────────────────────────────
 affiliation:
-  role: "Ph.D. researcher"
-  lab: "Your Lab / Group"
-  lab_link: "[your lab link]"
+  role: "Ph.D. / Researcher"
+  lab: "Mathematics of Imaging and AI (MIA)"
+  lab_link: "https://www.utwente.nl/en/eemcs/mia/"
   supervisors:
-    - name: "[Supervisor 1]"
-      link: "[supervisor 1 link]"
-    - name: "[Supervisor 2]"
-      link: "[supervisor 2 link]"
+    - name: "Prof. Dr. Christoph Brune"
+      link: "https://scholar.google.com/citations?user=QkD3WhsAAAAJ"
+    - name: "Dr. Jelmer M. Wolterink"
+      link: "https://scholar.google.nl/citations?user=xzlXuWoAAAAJ"
 
 # ── Research Interests ──────────────────────────────────────────────────────
 research_interests:
-  - "Artificial Intelligence and Cognitive Modelling"
-  - "[Add your own topics, e.g. Computational Neuroscience]"
-  - "[Add another focus]"
-
-# ── Publications ────────────────────────────────────────────────────────────
-publications:
-  - thumbnail: "pub_sample.jpg"
-    citation: |
-      [Your Name], [Coauthors]<br>
-      <b><i>[Title of Your Paper]</i></b><br>
-      [Conference/Journal Name, Year]<br>
-      [<a href="[arxiv link]">arXiv</a>] [<a href="[code link]">code</a>] [<a href="[project page link]">project page</a>]
+  - "Computer Vision"
+  - "Representation Learning"
+  - "Medical Image Analysis"
+  - "Computational Constrains in Deep Learning"
 
 # ── Education ───────────────────────────────────────────────────────────────
 education:
-  - degree: "Ph.D. [Your Field]"
-    institution: "[Your University]"
-    start: "[Start Year]"
+  - degree: "Ph.D. in Applied Mathematics"
+    institution: "University of Twente"
+    start: "2024"
     end: "present"
-  - degree: "M.Sc. [Your Field]"
-    institution: "[Previous University]"
-    start: "[Years]"
-  - degree: "B.Sc. [Your Field]"
-    institution: "[Previous University]"
-    start: "[Years]"
+  - degree: "M.Sc. Applied Mathematics"
+    institution: "University of Twente"
+    start: "2022"
+    end: "2024"
+  - degree: "B.Sc. Double Degree in Applied Mathematics and Computer Science"
+    institution: "University of Twente"
+    start: "2019"
+    end: "2022"
 
 # ── Experience ──────────────────────────────────────────────────────────────
 experience:
-  - org: "[Research Lab / Company]"
-    location: "[Location]"
-    start: "[Year]"
+  - org: "Siemens Healthineers"
+    location: "Erlangen, Germany"
+    start: "2026"
     end: "present"
-    role: "[Your role]"
-  - org: "[Other Institution]"
-    location: ""
-    start: "[Year]"
-    end: "[Year]"
-    role: "[Description]"
+    role: "Research Scientist Visit"
+  - org: "Enigmach"
+    location: "Netherlands"
+    start: "2024"
+    role: "Machine Learning Consultancy for Businesses"
+  - org: "ESports Team Twente"
+    location: "Enschede, Netherlands"
+    start: "2022"
+    end: "2023"
+    role: "Data Analyst"
+  - org: "University of Twente"
+    location: "Enschede, Netherlands"
+    start: "2020"
+    end: "2024"
+    role: "Teaching Assistant"
 
 # ── Footer ──────────────────────────────────────────────────────────────────
 footer: "Hosted on GitHub Pages — Adapted from [Takeru Miyato](https://takerum.github.io/)'s template."

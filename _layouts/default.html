@@ -38,7 +38,7 @@ layout: base
     <!-- Latest News -->
     <h3>Latest News</h3>
     <ul class="news-list">
-      {% assign recent_posts = site.posts | limit: 3 %}
+      {% assign recent_posts = site.posts | slice: 0, 3 %}
       {% if recent_posts.size > 0 %}
         {% for post in recent_posts %}
         <li>
@@ -46,55 +46,129 @@ layout: base
         </li>
         {% endfor %}
       {% else %}
-        <li><small>[No recent updates. Add blog posts to see them here.]</small></li>
+        <li><small>No recent updates.</small></li>
       {% endif %}
     </ul>
 
-    <!-- Publications -->
-    <h3>Publications</h3>
-    <p>Full list available on <a href="https://scholar.google.com/{{ site.author.scholar }}" target="_blank" rel="noopener">Google Scholar</a>.</p>
-    <ol>
-      {% for pub in p.publications %}
-      <li class="publication-item">
-        <div class="publication-thumbnail">
-          <img src="{{ site.baseurl }}/assets/images/{{ pub.thumbnail }}" alt="Thumbnail for {{ pub.title }}" loading="lazy">
-        </div>
-        <div class="publication-content">
-          {{ pub.citation }}
-        </div>
-      </li>
-      {% endfor %}
-    </ol>
-
     <!-- Projects -->
     <h3>Projects</h3>
-    {% if site.projects.size > 0 %}
+
+    {% assign featured_projects = site.projects
+      | where_exp: "project", "project.categories.size == 1 and project.categories contains 'project'"
+      | where: "featured", true
+    %}
+
+    {% if featured_projects.size > 0 %}
       <div class="projects-grid">
-        {% for project in site.projects %}
-        <div class="project-card">
-          {% if project.thumbnail %}
-            <div class="project-thumbnail">
-              <img src="{{ site.baseurl }}/assets/images/{{ project.thumbnail }}" alt="{{ project.name }}" loading="lazy">
-            </div>
-          {% endif %}
-          <div class="project-content">
-            <h3><a href="{{ site.baseurl }}{{ project.url }}">{{ project.name }}</a></h3>
-            <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
-            {% if project.tags %}
-              <div class="project-tags">
-                {% for tag in project.tags %}
-                  <span class="tag">{{ tag }}</span>
-                {% endfor %}
+        {% for project in featured_projects %}
+          <div class="project-card">
+            {% if project.thumbnail %}
+              <div class="project-thumbnail">
+                <img
+                  src="{{ site.baseurl }}/assets/images/project/{{ project.thumbnail }}"
+                  alt="{{ project.name }}"
+                  loading="lazy"
+                >
               </div>
             {% endif %}
+
+            <div class="project-content">
+              <h3>
+                <a href="{{ site.baseurl }}{{ project.url }}">
+                  {{ project.name }}
+                </a>
+              </h3>
+
+              <p>{{ project.description | strip_html | truncatewords: 20 }}</p>
+
+              {% if project.tags %}
+                <div class="project-tags">
+                  {% for tag in project.tags %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
           </div>
-        </div>
         {% endfor %}
       </div>
-      <p><small><a href="{{ site.baseurl }}/projects/">View all projects &rarr;</a></small></p>
+
+      <p>
+        <small>
+          <a href="{{ site.baseurl }}/projects/">View all projects &rarr;</a>
+        </small>
+      </p>
     {% else %}
-      <p><small>[No projects yet. Add projects in the <code>_projects/</code> directory.]</small></p>
+      <p>
+        <small>No featured projects yet.</small>
+      </p>
     {% endif %}
+
+    <!-- Publications -->
+    <h3>Publications</h3>
+
+    <p>
+      Full list available on
+      <a
+        href="https://scholar.google.com/citations?user={{ site.author.scholar }}"
+        target="_blank"
+        rel="noopener"
+      >Google Scholar</a>.
+    </p>
+
+    {% assign featured_publications = site.projects
+      | where_exp: "project", "project.categories contains 'publication'"
+      | where: "featured", true
+    %}
+
+    {% if featured_publications.size > 0 %}
+      <ol>
+        {% for publication in featured_publications %}
+          <li class="publication-item">
+
+            {% if publication.thumbnail %}
+              <div class="publication-thumbnail">
+                <img
+                  src="{{ site.baseurl }}/assets/images/project/{{ publication.thumbnail }}"
+                  alt="Thumbnail for {{ publication.name }}"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+
+            <div class="publication-content">
+
+              {% if publication.citation %}
+                {{ publication.citation }}
+              {% else %}
+                {{ publication.name }}
+              {% endif %}
+
+              {% if publication.links %}
+                <div class="publication-links">
+                  {% for link in publication.links %}
+                    <a href="{{ link.url }}" target="_blank" rel="noopener">
+                      [{{ link.label }}]
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+
+    <!-- Experience -->
+    <h3>Experience</h3>
+    <ul>
+      {% for exp in p.experience %}
+      <li>
+        <b>{{ exp.org }}</b>{% if exp.location != "" %} — {{ exp.location }}{% endif %} {{ exp.start }}{% if exp.end %}–{{ exp.end }}{% endif %} — {{ exp.role }}
+      </li>
+      {% endfor %}
+    </ul>
 
     <!-- Education -->
     <h3>Education</h3>
@@ -103,16 +177,6 @@ layout: base
       <li>
         <b>{{ edu.degree }}</b> – {{ edu.institution }}
         {% if edu.start %}{{ edu.start }}{% if edu.end %} – {{ edu.end }}{% endif %}{% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-
-    <!-- Experience -->
-    <h3>Experience</h3>
-    <ul>
-      {% for exp in p.experience %}
-      <li>
-        <b>{{ exp.org }}</b>{% if exp.location != "" %} — {{ exp.location }}{% endif %} {{ exp.start }}{% if exp.end %}–{{ exp.end }}{% endif %} — {{ exp.role }}
       </li>
       {% endfor %}
     </ul>
