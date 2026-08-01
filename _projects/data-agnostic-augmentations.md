@@ -22,6 +22,8 @@ citation: >
   Medical Imaging with Deep Learning (MIDL), 2025.
 
 links:
+  - label: "OpenReview"
+    url: "https://openreview.net/forum?id=erHgJGtptZ"
   - label: "arXiv"
     url: "https://arxiv.org/abs/2505.10223"
   - label: "GitHub"

@@ -24,10 +24,12 @@ citation: >
   Scale Space and Variational Methods in Computer Vision (SSVM), 2025.
 
 links:
-  - label: "SSVM"
+  - label: "Springer NatureLink"
     url: "https://doi.org/10.1007/978-3-031-92366-1_31"
   - label: "arXiv"
     url: "https://arxiv.org/abs/2505.11913"
+  - label: "GitHub"
+    url: "https://github.com/SCdummer/joint-manifold-learning-and-ot"
 ---
 
 ## Overview
