@@ -20,7 +20,7 @@ thumbnail: "fourier-basis-augmentation.jpg"
 
 citation: >
   "Fourier-basis Functions to Bridge Augmentation Gap: Rethinking Frequency Augmentation in Image Classification." <br>
-  <u>Vaish, P.<\u>, Wang, S., Strisciuglio, N. <br>
+  <u>Vaish, P.</u>, Wang, S., Strisciuglio, N. <br>
   Computer Vision and Pattern Recognition (CVPR), 2024.
 
 links:

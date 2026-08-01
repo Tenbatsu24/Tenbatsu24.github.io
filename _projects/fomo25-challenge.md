@@ -18,7 +18,7 @@ thumbnail: "fomo25-challenge.jpg"
 
 citation: >
   "Towards Brain MRI Foundation Models for the Clinic: Findings from the FOMO25 Challenge." <br>
-  Munk, A., Cerri, S., ..., <u>Vaish, P.<\u>, et al. <br>
+  Munk, A., Cerri, S., ..., <u>Vaish, P.</u>, et al. <br>
   Preprint (in-review), 2026.
 
 links:

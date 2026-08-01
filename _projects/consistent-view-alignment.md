@@ -20,7 +20,7 @@ thumbnail: "consistent-view-alignment.jpg"
 
 citation: >
   "Consistent View Alignment Improves Foundation Models for 3D Medical Image Segmentation." <br>
-  <u>Vaish, P.<\u>, Meister, F., Heimann, T., Brune, C., Wolterink, J. M. <br>
+  <u>Vaish, P.</u>, Meister, F., Heimann, T., Brune, C., Wolterink, J. M. <br>
   Preprint (in-review), 2025.
 
 links:

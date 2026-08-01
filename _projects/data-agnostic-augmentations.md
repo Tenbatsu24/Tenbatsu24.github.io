@@ -18,7 +18,7 @@ thumbnail: "data-agnostic-augmentations.jpg"
 
 citation: >
   "Data-Agnostic Augmentations for Unknown Variations: Out-of-Distribution Generalisation in MRI Segmentation." <br>
-  <u>Vaish, P.<\u>, Meister, F., Heimann, T., Brune, C., Wolterink, J. M. <br>
+  <u>Vaish, P.</u>, Meister, F., Heimann, T., Brune, C., Wolterink, J. M. <br>
   Medical Imaging with Deep Learning (MIDL), 2025.
 
 links:

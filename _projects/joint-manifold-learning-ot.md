@@ -20,7 +20,7 @@ thumbnail: "joint-manifold-learning-ot.jpg"
 
 citation: >
   "Joint Manifold Learning and Optimal Transport for Dynamic Imaging." <br>
-  Dummer, S., <u>Vaish, P.<\u>, Brune, C. <br>
+  Dummer, S., <u>Vaish, P.</u>, Brune, C. <br>
   Scale Space and Variational Methods in Computer Vision (SSVM), 2025.
 
 links:

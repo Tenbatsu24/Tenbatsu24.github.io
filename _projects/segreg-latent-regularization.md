@@ -18,7 +18,7 @@ thumbnail: "segreg-latent-regularization.jpg"
 
 citation: >
   "SegReg: Latent Space Regularization for Improved Medical Image Segmentation." <br>
-  <u>Vaish, P.<\u>, Ranem, A., Meister, F., Heimann, T., Brune, C., Wolterink, J. M. <br>
+  <u>Vaish, P.</u>, Ranem, A., Meister, F., Heimann, T., Brune, C., Wolterink, J. M. <br>
   Preprint (in-review), 2026.
 
 links:
