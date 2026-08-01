@@ -16,6 +16,8 @@ tags:
   - data-augmentation
   - robustness
 
+rank: 8
+
 thumbnail: "fourier-basis-augmentation.jpg"
 
 citation: >

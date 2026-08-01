@@ -14,6 +14,8 @@ tags:
   - foundation-models
   - self-supervised-learning
 
+rank: 1
+
 thumbnail: "fomo25-challenge.jpg"
 
 citation: >

@@ -16,6 +16,8 @@ tags:
   - optimal-transport
   - dynamic-imaging
 
+rank: 6
+
 thumbnail: "joint-manifold-learning-ot.jpg"
 
 citation: >

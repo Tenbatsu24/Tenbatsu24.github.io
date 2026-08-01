@@ -14,6 +14,8 @@ tags:
   - data-augmentation
   - segmentation
 
+rank: 2
+
 thumbnail: "data-agnostic-augmentations.jpg"
 
 citation: >

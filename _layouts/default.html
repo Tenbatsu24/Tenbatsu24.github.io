@@ -50,12 +50,80 @@ layout: base
       {% endif %}
     </ul>
 
+    <!-- Publications -->
+    <h3>Publications</h3>
+
+    <p>
+      <small>
+        <a href="{{ site.baseurl }}/projects/">View all publications list &rarr;</a>
+      </small>
+    </p>
+
+    <p>
+      <small>
+          <a
+            href="https://scholar.google.com/citations?user={{ site.author.scholar }}"
+            target="_blank"
+            rel="noopener"
+          >View all publications on Google Scholar &rarr;</a>
+      </small>
+    </p>
+
+    {% assign featured_publications = site.projects
+      | where_exp: "project", "project.categories contains 'publication'"
+      | where: "featured", true
+      | limit: 5
+      | sort: "rank"
+      | reverse
+    %}
+
+    {% if featured_publications.size > 0 %}
+      <ol>
+        {% for publication in featured_publications %}
+          <li class="publication-item">
+
+            {% if publication.thumbnail %}
+              <div class="publication-thumbnail">
+                <img
+                  src="{{ site.baseurl }}/assets/images/project/{{ publication.thumbnail }}"
+                  alt="Thumbnail for {{ publication.name }}"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+
+            <div class="publication-content">
+
+              {% if publication.citation %}
+                {{ publication.citation }}
+              {% else %}
+                {{ publication.name }}
+              {% endif %}
+
+              {% if publication.links %}
+                <div class="publication-links">
+                  {% for link in publication.links %}
+                    <a href="{{ link.url }}" target="_blank" rel="noopener">
+                      [{{ link.label }}]
+                    </a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+
     <!-- Projects -->
     <h3>Projects</h3>
 
     {% assign featured_projects = site.projects
       | where_exp: "project", "project.categories.size == 1 and project.categories contains 'project'"
       | where: "featured", true
+      | sort: "rank"
+      | reverse
     %}
 
     {% if featured_projects.size > 0 %}
@@ -102,62 +170,6 @@ layout: base
       <p>
         <small>No featured projects yet.</small>
       </p>
-    {% endif %}
-
-    <!-- Publications -->
-    <h3>Publications</h3>
-
-    <p>
-      Full list available on
-      <a
-        href="https://scholar.google.com/citations?user={{ site.author.scholar }}"
-        target="_blank"
-        rel="noopener"
-      >Google Scholar</a>.
-    </p>
-
-    {% assign featured_publications = site.projects
-      | where_exp: "project", "project.categories contains 'publication'"
-      | where: "featured", true
-    %}
-
-    {% if featured_publications.size > 0 %}
-      <ol>
-        {% for publication in featured_publications %}
-          <li class="publication-item">
-
-            {% if publication.thumbnail %}
-              <div class="publication-thumbnail">
-                <img
-                  src="{{ site.baseurl }}/assets/images/project/{{ publication.thumbnail }}"
-                  alt="Thumbnail for {{ publication.name }}"
-                  loading="lazy"
-                >
-              </div>
-            {% endif %}
-
-            <div class="publication-content">
-
-              {% if publication.citation %}
-                {{ publication.citation }}
-              {% else %}
-                {{ publication.name }}
-              {% endif %}
-
-              {% if publication.links %}
-                <div class="publication-links">
-                  {% for link in publication.links %}
-                    <a href="{{ link.url }}" target="_blank" rel="noopener">
-                      [{{ link.label }}]
-                    </a>
-                  {% endfor %}
-                </div>
-              {% endif %}
-
-            </div>
-          </li>
-        {% endfor %}
-      </ol>
     {% endif %}
 
     <!-- Experience -->

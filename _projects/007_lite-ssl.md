@@ -15,6 +15,8 @@ tags:
   - computer-vision
   - open-source
 
+rank: 7
+
 thumbnail: "lite-ssl.png"
 
 links:

@@ -14,6 +14,8 @@ tags:
   - machine-learning
   - mobile-app
 
+rank: 4
+
 thumbnail: "issp.jpg"
 
 links:

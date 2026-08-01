@@ -14,6 +14,8 @@ tags:
   - segmentation
   - continual-learning
 
+rank: 3
+
 thumbnail: "segreg-latent-regularization.jpg"
 
 citation: >

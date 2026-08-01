@@ -16,6 +16,8 @@ tags:
   - self-supervised-learning
   - segmentation
 
+rank: 5
+
 thumbnail: "consistent-view-alignment.jpg"
 
 citation: >
