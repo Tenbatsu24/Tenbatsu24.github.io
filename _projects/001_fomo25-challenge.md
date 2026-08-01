@@ -16,7 +16,7 @@ tags:
 
 rank: 1
 
-thumbnail: "fomo25-challenge.jpg"
+thumbnail: "fomo60k.png"
 
 citation: >
   "Towards Brain MRI Foundation Models for the Clinic: Findings from the FOMO25 Challenge." <br>

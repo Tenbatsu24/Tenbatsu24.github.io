@@ -538,10 +538,18 @@ main {
   flex-shrink: 0;
   width: 128px;
   transition: transform 0.3s ease;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .publication-thumbnail:hover {
   transform: scale(1.05);
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .publication-thumbnail img {
@@ -550,6 +558,7 @@ main {
   border-radius: 12px;
   box-shadow: 0 2px 8px var(--shadow);
   transition: opacity 0.3s ease;
+  vertical-align: middle;
 }
 
 .publication-content {

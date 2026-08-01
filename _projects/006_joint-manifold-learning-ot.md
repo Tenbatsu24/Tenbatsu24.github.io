@@ -18,7 +18,7 @@ tags:
 
 rank: 6
 
-thumbnail: "joint-manifold-learning-ot.jpg"
+thumbnail: "joint-ot.jpg"
 
 citation: >
   "Joint Manifold Learning and Optimal Transport for Dynamic Imaging." <br>

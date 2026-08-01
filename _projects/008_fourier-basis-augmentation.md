@@ -18,7 +18,7 @@ tags:
 
 rank: 8
 
-thumbnail: "fourier-basis-augmentation.jpg"
+thumbnail: "afa.jpg"
 
 citation: >
   "Fourier-basis Functions to Bridge Augmentation Gap: Rethinking Frequency Augmentation in Image Classification." <br>

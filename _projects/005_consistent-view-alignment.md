@@ -18,7 +18,7 @@ tags:
 
 rank: 5
 
-thumbnail: "consistent-view-alignment.jpg"
+thumbnail: "cva.jpg"
 
 citation: >
   "Consistent View Alignment Improves Foundation Models for 3D Medical Image Segmentation." <br>

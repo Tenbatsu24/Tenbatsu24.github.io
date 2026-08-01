@@ -16,7 +16,7 @@ tags:
 
 rank: 3
 
-thumbnail: "segreg-latent-regularization.jpg"
+thumbnail: "segreg.jpg"
 
 citation: >
   "SegReg: Latent Space Regularization for Improved Medical Image Segmentation." <br>
